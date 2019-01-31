@@ -8,6 +8,7 @@ import React, { Component } from 'react';
 import {
     StyleSheet,
     View,
+    ToastAndroid,
 } from 'react-native';
 import CreateHeroView from './CreateHeroView';
 import ListHeroesView from './ListHeroesView';
@@ -38,8 +39,7 @@ export default class HomeView extends Component<Props> {
     }
 
     initListHeroes = () => {
-        getAllHeroes()
-            .then(({ result, message }) => this.setState({ heroes: result }));
+        getAllHeroes().then(({ result, message }) => this.setState({ heroes: result }));
     }
 
     render() {
