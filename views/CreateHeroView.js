@@ -16,7 +16,6 @@ import {
 } from 'react-native';
 import Hero from '../models/Hero';
 import { createHero } from '../controllers/HeroController';
-import Message from '../models/Message';
 
 export default class CreateHeroView extends Component<Props> {
 
@@ -57,8 +56,7 @@ export default class CreateHeroView extends Component<Props> {
         if (!this.state.hero)
             return;
 
-        let createHeroMsg = createHero(this.state.hero);
-        createHeroMsg.then(({ result, message }) => {
+        createHero(this.state.hero).then(({ result, message }) => {
             ToastAndroid.show(message, ToastAndroid.SHORT);
             if (result) {
                 this.setState({ hero: new Hero() });
