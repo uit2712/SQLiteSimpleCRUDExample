@@ -11,7 +11,7 @@ Example about CRUD Hero
 + npm install --save react-navigation react-native-gesture-handler events react-native-vector-icons react-native-sqlite-storage
 + react-native link
 - STEP 2: Create db file 'hero-db.sqlite'
-- STEP 3: Clone source code from github branch 'master': https://github.com/uit2712/RealmSimpl...
+- STEP 3: Clone source code from github branch 'master': https://github.com/uit2712/RealmSimpleCRUDExample
 + Copy folder 'models', 'controllers', 'views', 'navigators' and file 'App.js'
 - STEP 4: Edit controller HeroController:
 + Create hero
